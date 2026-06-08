@@ -44,11 +44,8 @@ author:
   github: Comandosai
   url: https://comandos.ai
 
-# Превью указывает на апстрим-источник (рабочая ссылка). После запуска конвейера
-# и создания репо Comandosai/skills-library переключим на:
-#   https://github.com/Comandosai/skills-library/tree/main/brainstorming
 links:
-  github: https://github.com/sickn33/antigravity-awesome-skills
+  github: https://github.com/Comandosai/skills-library/tree/main/brainstorming
 
 requirements:
   - name: Claude Code CLI
