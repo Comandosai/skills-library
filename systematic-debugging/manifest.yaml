@@ -1,0 +1,92 @@
+schema: comandos-skill-manifest/v1
+slug: systematic-debugging
+name: Системная отладка
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: При баге агент не лепит фиксы наугад, а находит настоящую причину — и только потом чинит
+  description: |
+    Навык-дисциплина для отладки. Когда что-то «не работает», агент обычно начинает менять
+    код наугад — поправит одно, сломает другое, и так по кругу. Этот навык выключает такое
+    поведение: сначала железное правило — никаких фиксов без расследования причины.
+
+    Агент идёт по четырём фазам: читает ошибки и воспроизводит баг, сравнивает с рабочими
+    примерами, выдвигает одну гипотезу и проверяет её минимальным изменением, и только потом
+    чинит корень — одним точным фиксом с тестом. Если три попытки подряд провалились — навык
+    останавливает агента и заставляет усомниться в самой архитектуре, а не лепить четвёртый фикс.
+
+    Ты говоришь «у меня ошибка» или «не работает» — и получаешь реально найденную и устранённую
+    причину, а не «вроде поправил». Работает с любым агентом: Claude Code, OpenAI Codex,
+    Google Antigravity.
+  category: Разработка
+  icon: 🐞
+  bullets:
+    - Железное правило — никаких фиксов до того, как найдена настоящая причина
+    - Четыре фазы: воспроизвести → сравнить → проверить гипотезу → починить корень
+    - Одна гипотеза и одно минимальное изменение за раз — без «меняю всё сразу»
+    - Трассировка данных от симптома к источнику, фикс в источнике, а не в симптоме
+    - 3 провальных фикса = стоп и вопрос к архитектуре, а не пятая попытка наугад
+  tags:
+    - Отладка
+    - Баги
+    - Диагностика
+    - Тесты
+    - Root cause
+    - Разработка
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/systematic-debugging
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Разработчики
+  - Indie-разработчики
+  - AI-интеграторы
+  - Стартапы
+  - Технические основатели
+
+capabilities:
+  - root-cause-investigation
+  - bug-reproduction
+  - hypothesis-testing
+  - data-flow-tracing
+  - regression-test-creation
+  - architecture-questioning
+  - root-cause-fixing
+
+triggers:
+  ru:
+    - у меня ошибка
+    - почему это не работает
+    - падает тест
+    - найди причину бага
+    - помоги отладить
+    - неожиданное поведение

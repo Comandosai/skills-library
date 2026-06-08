@@ -1,0 +1,90 @@
+schema: comandos-skill-manifest/v1
+slug: prompt-engineering
+name: Промпт-инжиниринг
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Пишет и чинит промпты за тебя — скажи, что нужно, получи сильный промпт со стабильным результатом
+  description: |
+    Навык-промптолог внутри агента. Включаешь — и он сам пишет промпты по проверенным
+    паттернам: few-shot примеры, chain-of-thought, system-промпты, шаблоны с переменными.
+    Ты говоришь по-человечески «напиши промпт, чтобы нейросеть делала Y» — и получаешь
+    готовую конструкцию, которую можно вставить в любую модель и получать ровный результат.
+
+    Если модель «тупит», путается или выдаёт разное на одинаковый запрос — навык разбирает
+    промпт, находит, где размыто, и переписывает: добавляет примеры, структуру, ограничения,
+    формат вывода. Это не учебник по промптингу, а исполнитель — он делает работу за тебя.
+    Работает с любым агентом: Claude Code, Codex, Gemini, Cursor.
+  category: AI и нейросети
+  icon: 🎯
+  bullets:
+    - Пишет промпт с нуля по человеческому описанию задачи
+    - Чинит «тупящие» промпты — находит, где размыто, и переписывает
+    - Знает рабочие паттерны: few-shot, chain-of-thought, system-промпты, шаблоны
+    - Добивается стабильного результата вместо случайного на каждый запрос
+    - Подходит для любой модели и любого агента — не привязан к одной нейросети
+  tags:
+    - Промптинг
+    - Нейросети
+    - Few-shot
+    - Chain-of-thought
+    - Автоматизация
+    - LLM
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/prompt-engineering
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - AI-интеграторы
+  - Маркетологи
+  - Indie-разработчики
+  - Все, кто работает с нейросетями каждый день
+
+capabilities:
+  - prompt-writing
+  - prompt-debugging
+  - few-shot-design
+  - chain-of-thought
+  - system-prompt-design
+  - template-systems
+  - prompt-optimization
+  - output-formatting
+
+triggers:
+  ru:
+    - напиши промпт чтобы нейросеть делала
+    - модель тупит поправь промпт
+    - почему модель выдаёт разное на один запрос
+    - составь системный промпт для бота
+    - сделай промпт стабильнее
+    - оптимизируй мой промпт

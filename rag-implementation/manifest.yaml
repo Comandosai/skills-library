@@ -1,0 +1,92 @@
+schema: comandos-skill-manifest/v1
+slug: rag-implementation
+name: "RAG: база знаний"
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Собирает бота и поиск, которые отвечают по твоим документам — а не выдумывают
+  description: |
+    Навык превращает агента в инженера RAG (Retrieval-Augmented Generation). Ты говоришь
+    «сделай бота, который отвечает по моим документам / базе знаний» — и получаешь не очередную
+    болталку, которая фантазирует, а систему, где каждый ответ опирается на твои реальные данные:
+    регламенты, статьи, переписку, базу продукта.
+
+    Под капотом агент проходит весь путь: грамотно нарезает документы на смысловые куски (chunking),
+    считает эмбеддинги, складывает их в векторную базу и настраивает поиск — гибридный (вектор +
+    ключевые слова) с переранжированием, чтобы в контекст модели попадало именно то, что нужно.
+    Код фреймворк-агностичен: подойдёт под твой стек и любую векторную БД.
+
+    Ровно так у нас устроен бот-консьерж COMANDOS — отвечает по базе курса, а не сочиняет.
+    Этот навык даёт тебе тот же подход для своего проекта.
+  category: AI и нейросети
+  icon: 📚
+  bullets:
+    - Отвечает строго по твоим данным — фактами из документов, а не выдумками
+    - Умная нарезка по смыслу (chunking), а не «порезали по 500 символов»
+    - Гибридный поиск (вектор + ключевые слова) с переранжированием релевантности
+    - Подсказывает, когда RAG реально нужен, а когда это лишняя сложность
+    - Фреймворк-агностичный код — под твой стек и любую векторную базу
+  tags:
+    - RAG
+    - Эмбеддинги
+    - Векторный поиск
+    - База знаний
+    - Чат-бот
+    - Семантический поиск
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/rag-implementation
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Интеграторы и AI-разработчики
+  - Маркетологи
+  - Indie-разработчики
+  - Стартапы
+
+capabilities:
+  - document-chunking
+  - embedding-models
+  - vector-stores
+  - retrieval-strategies
+  - hybrid-search
+  - reranking
+  - rag-evaluation
+
+triggers:
+  ru:
+    - сделай бота, который отвечает по моим документам
+    - собери поиск по базе знаний
+    - нарежь документы в векторную базу
+    - подключи RAG к проекту
+    - чтобы бот отвечал по моим данным, а не выдумывал
+    - настрой эмбеддинги и семантический поиск

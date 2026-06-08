@@ -1,0 +1,94 @@
+schema: comandos-skill-manifest/v1
+slug: content-creator
+name: Контент-мейкер
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  upstream: https://github.com/Comandosai/skills-library/tree/main/content-creator
+  license: MIT
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Пишет SEO-контент в едином tone of voice — посты, статьи, контент-план
+  description: |
+    Навык превращает агента в твоего контент-мейкера, который держит единый голос
+    бренда во всём, что пишет: блог-посты, соцсети, рассылки, контент-план. Сначала
+    он разбирает твой стиль — формальность, тон, структуру фраз — и дальше пишет так,
+    будто это писал ты сам, а не нейросеть.
+
+    Внутри — анализатор бренд-голоса, SEO-оптимизатор, библиотека фреймворков под
+    каждый тип контента и шаблоны для соцсетей. Ты говоришь «сделай контент-план на
+    месяц» или «напиши пять постов в моём стиле» — получаешь готовые материалы под
+    конкретные каналы, с проверенной плотностью ключей и правильной структурой.
+
+    Подходит, когда контента нужно много и регулярно, а голос должен оставаться
+    своим — без разнобоя, воды и канцелярита.
+  category: Контент
+  icon: 📝
+  bullets:
+    - Анализирует твой стиль и пишет в едином tone of voice
+    - SEO под капотом — плотность ключей, заголовки, мета
+    - Фреймворки под каждый тип: блог, соцсети, рассылка
+    - Контент-план на месяц с распределением по каналам
+    - Репёрпосинг — одна идея раскладывается под все площадки
+  tags:
+    - Контент
+    - SEO
+    - Соцсети
+    - Контент-план
+    - Бренд-голос
+    - Копирайтинг
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/content-creator
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Маркетологи
+  - Интеграторы
+  - Indie-разработчики
+  - Контент-команды
+
+capabilities:
+  - brand-voice-analysis
+  - seo-optimization
+  - blog-writing
+  - social-media-content
+  - content-calendar-planning
+  - content-repurposing
+  - content-frameworks
+
+triggers:
+  ru:
+    - сделай контент-план на месяц
+    - напиши посты в моём стиле
+    - проанализируй мой бренд-голос
+    - напиши seo-статью в блог
+    - адаптируй пост под соцсети
+    - оптимизируй текст под ключевые слова

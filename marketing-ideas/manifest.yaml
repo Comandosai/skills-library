@@ -1,0 +1,92 @@
+schema: comandos-skill-manifest/v1
+slug: marketing-ideas
+name: Маркетинг-идеи
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Говоришь «как продвигать мой продукт» — получаешь рабочие ходы из базы ~140 идей, под твой случай и по приоритету
+  description: |
+    Навык-стратег с библиотекой из ~140 проверенных маркетинговых и growth-ходов. Вместо
+    общих советов «делай контент и запускайся на Product Hunt» агент разбирает твой продукт,
+    аудиторию и стадию — и выдаёт КОНКРЕТНЫЕ приёмы, которые реально применимы именно у тебя.
+
+    Идеи разложены по категориям: контент и SEO, платный трафик, соцсети и комьюнити, email,
+    партнёрства, запуски и промо, product-led growth, нестандартные ходы. Под каждый
+    подобранный приём — почему он подходит, с чего начать за 2–3 шага, какой результат ждать
+    и сколько это стоит по времени и деньгам.
+
+    На выходе — не вдохновляющий список «на подумать», а приоритизированный набор ходов:
+    что сделать в первую очередь (быстрые победы), что — на горизонте месяца, а что отложить.
+    Подобрано под твой бюджет, команду и то, что ты уже пробовал.
+  category: Маркетинг
+  icon: 📈
+  bullets:
+    - База из ~140 проверенных маркетинг- и growth-ходов под рукой у агента
+    - Подбирает 3–5 релевантных приёмов под твой продукт, аудиторию и стадию
+    - По каждому ходу — зачем он тебе, первые шаги, ожидаемый результат и цена вопроса
+    - Приоритизирует по реализуемости: быстрые победы → среднесрок → долгая игра
+    - Учитывает бюджет, размер команды и то, что ты уже пробовал
+  tags:
+    - Маркетинг
+    - Growth
+    - Продвижение
+    - Привлечение
+    - Стратегия
+    - Запуск
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/marketing-ideas
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Интеграторы и агентства
+  - Маркетологи
+  - Indie-разработчики
+  - Стартапы
+
+capabilities:
+  - idea-recommendation
+  - growth-strategy
+  - channel-selection
+  - campaign-planning
+  - budget-aware-prioritization
+  - stage-based-tactics
+  - implementation-roadmap
+
+triggers:
+  ru:
+    - как продвигать мой продукт
+    - дай маркетинговые идеи
+    - как привлечь клиентов
+    - идеи для роста
+    - какие каналы продвижения выбрать
+    - как раскрутить продукт

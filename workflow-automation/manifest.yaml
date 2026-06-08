@@ -1,0 +1,96 @@
+schema: comandos-skill-manifest/v1
+slug: workflow-automation
+name: Автоматизация процессов
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  upstream: vibeship-spawner-skills
+  license: Apache 2.0
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Проектирует надёжную автоматизацию процессов, которая не падает на полпути и возобновляется с места сбоя
+  description: |
+    Навык превращает агента в архитектора автоматизации. Ты говоришь «автоматизируй процесс X»
+    — заявка с сайта в CRM, письмо клиенту, синхронизация с таблицей, цепочка из десяти шагов —
+    и получаешь рабочую схему или настройку, а не хрупкий скрипт, который умрёт от первого сбоя сети.
+
+    Под капотом — durable execution: каждый шаг чекпоинтится, и если на середине что-то отвалилось
+    (упал внешний сервис, оборвалась сеть, кончился таймаут), процесс возобновляется ровно с места
+    обрыва, а не запускается с нуля и не теряет данные. Агент сам подбирает платформу под ситуацию —
+    n8n для быстрых визуальных сценариев, Temporal для сложной корректной оркестрации, Inngest для
+    баланса DX и надёжности — и выкладывает идемпотентность, ретраи с backoff, таймауты, обработку
+    ошибок и наблюдаемость.
+
+    Это ядро того, чем занимается COMANDOS: AI-автоматизации, которые реально работают в проде, а не
+    «демка на один прогон». Идеально, когда рутинная цепочка съедает время и обязана выполняться без сбоев.
+  category: Автоматизация
+  icon: 🔄
+  bullets:
+    - Durable execution — процесс возобновляется с места сбоя, а не с нуля
+    - Сам подбирает платформу под задачу — n8n, Temporal или Inngest
+    - Идемпотентность, ретраи с экспоненциальным backoff и таймауты из коробки
+    - Разбивает монолитные цепочки на чекпоинтенные шаги с наблюдаемостью
+    - Скажи «автоматизируй X» — получи рабочую схему или настройку
+  tags:
+    - Автоматизация
+    - n8n
+    - Workflow
+    - Интеграции
+    - Оркестрация
+    - Durable Execution
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/workflow-automation
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Интеграторы
+  - Маркетологи
+  - Indie-разработчики
+  - Стартапы
+
+capabilities:
+  - workflow-automation
+  - workflow-orchestration
+  - durable-execution
+  - event-driven-workflows
+  - step-functions
+  - job-queues
+  - background-jobs
+  - scheduled-tasks
+
+triggers:
+  ru:
+    - автоматизируй процесс
+    - собери воркфлоу
+    - заявка с сайта в CRM
+    - настрой n8n сценарий
+    - чтобы не падало на полпути
+    - оркестрация фоновых задач

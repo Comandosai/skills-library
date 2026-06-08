@@ -1,0 +1,93 @@
+schema: comandos-skill-manifest/v1
+slug: mcp-builder
+name: MCP-конструктор
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Строит MCP-серверы — мостики, через которые ИИ дёргает твой CRM, API и любые внешние сервисы
+  description: |
+    MCP (Model Context Protocol) — открытый стандарт, по которому ИИ-агент подключается к
+    внешнему миру: твоей CRM, базе, платёжке, любому сервису с API. MCP-сервер — это и есть
+    такой мостик. Один раз построил — и его понимают сразу несколько клиентов: Claude, Cursor,
+    Codex, Gemini.
+
+    Навык включает в агенте режим инженера интеграций. Ты говоришь «подключи агента к моему
+    CRM» или «сделай интеграцию с сервисом Z» — а он сам исследует API, проектирует набор
+    инструментов, пишет рабочий сервер на Python (FastMCP) или Node/TypeScript (MCP SDK),
+    собирает, прогоняет через MCP Inspector и докручивает на наборе проверок.
+
+    Внутри — методология от Anthropic: как называть инструменты, как отдавать данные
+    (JSON или Markdown), как делать пагинацию, понятные ошибки и аннотации безопасности.
+    Не просто «накидать код», а собрать интеграцию, которой агент реально сможет пользоваться.
+  category: Разработка
+  icon: 🔌
+  bullets:
+    - Подключает ИИ к твоему CRM, API и любому внешнему сервису через MCP
+    - Пишет сервер на Python (FastMCP) или Node/TypeScript (MCP SDK)
+    - Один сервер — много клиентов: Claude, Cursor, Codex, Gemini
+    - Проектирует инструменты по гайдлайнам Anthropic, а не наугад
+    - Собирает, тестирует через MCP Inspector и проверяет на наборе сценариев
+  tags:
+    - MCP
+    - Интеграции
+    - API
+    - Python
+    - TypeScript
+    - Автоматизация
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/mcp-builder
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Интеграторы
+  - Indie-разработчики
+  - Маркетологи
+  - Стартапы
+
+capabilities:
+  - api-research
+  - tool-design
+  - mcp-server-implementation
+  - python-fastmcp
+  - node-typescript-sdk
+  - testing-and-inspection
+  - evaluation-suite
+
+triggers:
+  ru:
+    - подключи агента к моему CRM
+    - сделай интеграцию с сервисом
+    - построй MCP-сервер
+    - оберни API в инструменты для ИИ
+    - дай агенту доступ к внешнему сервису
+    - напиши MCP под мой проект

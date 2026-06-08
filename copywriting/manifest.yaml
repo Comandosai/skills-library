@@ -1,0 +1,93 @@
+schema: comandos-skill-manifest/v1
+slug: copywriting
+name: Копирайтинг
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Пишет продающий текст по брифу — лендинги, прайсинги, заголовки, CTA
+  description: |
+    Навык превращает агента в конверсионного копирайтера. Ты говоришь «напиши текст
+    для лендинга» или «перепиши прайсинг» — и получаешь готовую структуру страницы:
+    заголовок, подзаголовок, блоки выгод, обработку возражений, призывы к действию.
+    Каждый элемент — с пояснением, почему он работает, и с 2–3 вариантами заголовков
+    и CTA на выбор.
+
+    Перед тем как писать, навык всегда уточняет бриф: тип страницы, целевое действие,
+    кто аудитория и какую боль она решает, чем продукт отличается от альтернатив. Не
+    угадывает — спрашивает. Поэтому текст бьёт точно в аудиторию, а не льёт воду.
+
+    Под капотом — проверенные принципы: ясность важнее красивости, выгоды важнее фич,
+    конкретика вместо «оптимизируем ваши процессы», язык клиента вместо корпоративного.
+    Подходит для лендингов, главных страниц, страниц прайсинга, фич и «о нас».
+  category: Маркетинг
+  icon: ✍️
+  bullets:
+    - Сначала уточняет бриф — тип страницы, аудиторию, цель, возражения
+    - Выдаёт текст по секциям: заголовок, выгоды, доказательства, CTA
+    - На заголовки и CTA даёт 2–3 варианта с обоснованием выбора
+    - Режет воду и бузворды — конкретика вместо «инновационных решений»
+    - Пишет на языке клиента, выгодами, а не списком фич
+  tags:
+    - Копирайтинг
+    - Лендинг
+    - Прайсинг
+    - CTA
+    - Конверсия
+    - Заголовки
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/copywriting
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Маркетологи
+  - Фаундеры
+  - Интеграторы
+  - Indie-разработчики
+
+capabilities:
+  - landing-copy
+  - pricing-copy
+  - headline-writing
+  - cta-optimization
+  - benefit-framing
+  - objection-handling
+  - brief-gathering
+
+triggers:
+  ru:
+    - напиши текст для лендинга
+    - перепиши прайсинг
+    - помоги с заголовком
+    - сделай продающий текст
+    - текст для страницы фичи
+    - вариант CTA

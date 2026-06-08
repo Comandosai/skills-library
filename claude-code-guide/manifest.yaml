@@ -1,0 +1,88 @@
+schema: comandos-skill-manifest/v1
+slug: claude-code-guide
+name: Claude Code на максимум
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  upstream: https://github.com/zebbern/claude-code-guide
+  license: MIT
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Справочник-настройка, чтобы выжимать из Claude Code максимум — конфиги, «Thinking»-режимы, отладка
+  description: |
+    Это не навык «сделай за меня», а навык «настрой и подскажи правильно». Он даёт агенту
+    и тебе единую базу знаний по самому Claude Code: как составить грамотный CLAUDE.md,
+    какими словами включать режимы глубокого мышления, как выводить агента из ступора
+    и какие приёмы экономят контекст и время.
+
+    Под капотом — шаблоны конфигов, словарь «Thinking»-ключей, чек-лист отладки и набор
+    лучших практик. Включаешь — и Claude Code начинает работать по уму: меньше промахов,
+    меньше переделок, больше дела с первого захода.
+
+    Идеально, когда ты только осваиваешь Claude Code или хочешь перестать воевать с
+    агентом и начать получать предсказуемый результат — даже если ты не глубокий технарь.
+  category: AI и нейросети
+  icon: 📘
+  bullets:
+    - Готовый шаблон CLAUDE.md — агент сразу знает правила твоего проекта
+    - Словарь «Thinking»-ключей, которые включают глубокое рассуждение
+    - Чек-лист отладки, когда агент застрял или делает не то
+    - Приёмы экономии контекста — меньше промахов, меньше переделок
+    - Лучшие практики итеративной работы с агентом
+  tags:
+    - Claude Code
+    - Настройка
+    - Продуктивность
+    - Промптинг
+    - Отладка
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/claude-code-guide
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+
+target_audience:
+  - Предприниматели
+  - Интеграторы
+  - Маркетологи
+  - Indie-разработчики
+  - Новички в Claude Code
+
+capabilities:
+  - claude-md-setup
+  - thinking-keywords
+  - debugging-workflow
+  - context-management
+  - prompting-strategies
+  - best-practices
+  - iterative-development
+
+triggers:
+  ru:
+    - как настроить Claude Code
+    - помоги составить CLAUDE.md
+    - агент застрял, что делать
+    - как включить глубокое мышление у агента
+    - лучшие практики работы с Claude Code
+    - почему агент делает не то
