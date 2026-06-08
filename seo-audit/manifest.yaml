@@ -1,0 +1,93 @@
+schema: comandos-skill-manifest/v1
+slug: seo-audit
+name: SEO-аудит
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Прогоняет сайт по SEO и выдаёт приоритизированный список, что чинить для роста в поиске
+  description: |
+    Навык-аудитор для органического трафика. Когда он активен, агент перестаёт давать общие
+    советы и проводит настоящий SEO-разбор сайта: техничка (индексация, robots, sitemap,
+    канониклы), контент и мета (title, description, заголовки, alt), скорость и Core Web Vitals,
+    структура и внутренние ссылки, E-E-A-T-сигналы.
+
+    Ты говоришь «проверь сайт по SEO» — получаешь не простыню галочек, а структурированный
+    отчёт: что не так, какой у проблемы вес для ранжирования, как нашли, чем чинить.
+    Каждый пункт идёт с приоритетом, а в конце — план действий по порядку: сначала то, что
+    блокирует индексацию, потом высокоэффективные правки, потом быстрые победы.
+
+    Работает по приоритетам Google: сперва «может ли поисковик найти и проиндексировать»,
+    потом «быстро и исправно ли всё работает», и только затем тонкая оптимизация контента.
+    Подходит под SaaS, e-commerce, блог и локальный бизнес — у каждого свои типовые грабли.
+  category: Маркетинг
+  icon: 🔍
+  bullets:
+    - Разбор по слоям — техничка, контент, мета, скорость, структура
+    - Каждая находка с весом (High/Medium/Low) и конкретным фиксом
+    - Приоритизированный план — от блокеров индексации до быстрых побед
+    - Core Web Vitals и мобильная версия под mobile-first индекс
+    - Типовые грабли под тип сайта — SaaS, магазин, блог, локальный бизнес
+  tags:
+    - SEO
+    - Аудит
+    - Поиск
+    - Оптимизация
+    - Индексация
+    - Core Web Vitals
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/seo-audit
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Маркетологи
+  - SEO-специалисты
+  - Indie-разработчики
+  - Владельцы интернет-магазинов
+
+capabilities:
+  - technical-seo-audit
+  - on-page-audit
+  - indexation-check
+  - core-web-vitals-review
+  - content-quality-assessment
+  - internal-linking-analysis
+  - prioritized-action-plan
+
+triggers:
+  ru:
+    - проверь сайт по SEO
+    - сделай SEO-аудит
+    - почему сайт не ранжируется
+    - проверь техническое SEO
+    - разбери мета-теги и заголовки
+    - проверь Core Web Vitals

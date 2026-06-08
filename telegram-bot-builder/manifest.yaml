@@ -1,0 +1,96 @@
+schema: comandos-skill-manifest/v1
+slug: telegram-bot-builder
+name: Конструктор Telegram-ботов
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  upstream: https://github.com/Comandosai/skills-library/tree/main/telegram-bot-builder
+  license: Apache-2.0
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Скажи «сделай бота, который делает X» — получи рабочего Telegram-бота
+  description: |
+    Навык превращает агента в опытного архитектора Telegram-ботов. Ты описываешь
+    словами, что бот должен уметь, — а агент проектирует и собирает его целиком:
+    команды и меню, кнопки и инлайн-клавиатуры, состояния диалога, вебхуки,
+    интеграции с внешними API и базой, а потом разворачивает на сервере.
+
+    Под капотом — знание всей экосистемы Telegram Bot API: какие библиотеки брать
+    под задачу (telegraf, grammY, aiogram), как сделать так, чтобы бот не «висел»
+    и не спамил, как принимать платежи и считать аналитику. Агент сам выбирает стек,
+    раскладывает проект по папкам и закрывает типичные грабли — таймауты, отсутствие
+    обработки ошибок, блокировки пользователями.
+
+    Особенно полезно для тех, кто живёт в Telegram: боты для канала, поддержки,
+    приёма заявок, авто-ответов, мини-CRM, доступа к закрытому контенту по подписке.
+  category: Разработка
+  icon: 🤖
+  bullets:
+    - Описываешь словами — агент собирает бота целиком, от команд до деплоя
+    - Сам подбирает стек под задачу (telegraf, grammY, aiogram) и раскладывает проект
+    - Меню, инлайн-кнопки, пагинация, состояния диалога — из коробки
+    - Вебхуки, интеграции с API и базой, приём платежей и аналитика
+    - Закрывает грабли — таймауты, ошибки, спам, блокировки
+  tags:
+    - Telegram
+    - Боты
+    - Webhook
+    - Интеграции
+    - Автоматизация
+    - Деплой
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/telegram-bot-builder
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Интеграторы
+  - Маркетологи
+  - Indie-разработчики
+  - Владельцы Telegram-каналов
+
+capabilities:
+  - bot-architecture
+  - command-design
+  - inline-keyboards
+  - state-management
+  - webhook-management
+  - api-integration
+  - bot-monetization
+  - bot-deployment
+
+triggers:
+  ru:
+    - сделай телеграм-бота
+    - напиши бота для telegram
+    - бот, который делает
+    - добавь команды и кнопки в бота
+    - настрой вебхук для бота
+    - подключи приём платежей в боте

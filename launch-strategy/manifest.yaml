@@ -1,0 +1,91 @@
+schema: comandos-skill-manifest/v1
+slug: launch-strategy
+name: Стратегия запуска
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Строит пошаговый план запуска продукта — до, во время и после, по фазам и каналам
+  description: |
+    Навык-стратег для запуска продукта или фичи. Вместо размытого «давай как-нибудь
+    объявим» он собирает конкретный план: пять фаз от внутреннего теста до полного релиза,
+    раскладку по каналам (свои, арендованные, заимствованные), тайминг, активности на
+    каждый день и чек-листы до/во время/после.
+
+    Ты говоришь «как запустить мой продукт» — получаешь дорожную карту с понятными шагами,
+    а не общие советы. Внутри — фреймворк ORB по каналам, отдельная схема под Product Hunt,
+    сценарии для лонча новой фичи и план поддержания импульса после запуска.
+
+    Идеально, когда выкатываешь MVP, beta, waitlist или анонсируешь крупное обновление и
+    нужно не упустить ни одного касания с аудиторией.
+  category: Маркетинг
+  icon: 🚀
+  bullets:
+    - Пять фаз запуска — от внутреннего теста до полного релиза
+    - Раскладка по каналам ORB — свои, арендованные, заимствованные
+    - Отдельный сценарий под Product Hunt с подготовкой и днём X
+    - Чек-листы до / во время / после запуска
+    - План поддержания импульса и регулярных анонсов
+  tags:
+    - Запуск
+    - Go-to-market
+    - Маркетинг
+    - Product Hunt
+    - Стратегия
+    - Анонс
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/launch-strategy
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Интеграторы
+  - Маркетологи
+  - Indie-разработчики
+  - Стартапы
+
+capabilities:
+  - launch-planning
+  - phased-rollout
+  - channel-strategy
+  - product-hunt-launch
+  - launch-checklist
+  - post-launch-momentum
+  - feature-announcement
+
+triggers:
+  ru:
+    - как запустить мой продукт
+    - составь план запуска
+    - стратегия выхода на рынок
+    - запускаю новую фичу
+    - готовлюсь к Product Hunt
+    - как анонсировать обновление

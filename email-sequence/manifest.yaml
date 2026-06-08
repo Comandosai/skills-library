@@ -1,0 +1,95 @@
+schema: comandos-skill-manifest/v1
+slug: email-sequence
+name: Цепочки писем
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Пишет цепочки писем под задачу — онбординг, прогрев, реактивацию, продажу — с таймингом и логикой каждого письма
+  description: |
+    Навык превращает агента в email-маркетолога. Ты говоришь «сделай прогрев»
+    или «нужна онбординг-серия писем» — и получаешь готовую последовательность:
+    сколько писем, с каким интервалом, у каждого свой смысл, тема, превью-текст
+    и тело. Не абстрактные советы, а собранная цепочка под конкретную цель.
+
+    Внутри — рабочие шаблоны под все типовые сценарии: приветствие после регистрации,
+    прогрев лида перед продажей, реактивация уснувших, дожим триала, возврат
+    отвалившихся клиентов, биллинг и реферальные письма. Навык держит логику
+    «одно письмо — одна задача», ведёт ценностью до оффера и выстраивает тайминг
+    под длину цикла сделки.
+
+    Подходит, когда нужно не одно письмо, а система: серия, которая ведёт человека
+    от первого контакта к нужному действию. Платформа любая — Claude Code, Codex,
+    Antigravity: навык одинаково собирает цепочку в любом агенте.
+  category: Маркетинг
+  icon: ✉️
+  bullets:
+    - Готовые шаблоны под онбординг, прогрев, реактивацию, дожим и возврат
+    - У каждого письма свой смысл, тема, превью и тайминг — не просто «текст рассылки»
+    - Логика «одно письмо — одна задача» и ценность до оффера
+    - Тайминг подстраивается под длину цикла сделки и стадию отношений
+    - Чек-лист аудита всей email-программы — что у тебя ещё не настроено
+  tags:
+    - Email
+    - Прогрев
+    - Онбординг
+    - Рассылки
+    - Реактивация
+    - Воронка
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/email-sequence
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Маркетологи
+  - Интеграторы
+  - Indie-разработчики
+  - Стартапы
+
+capabilities:
+  - welcome-sequence
+  - nurture-sequence
+  - re-engagement-sequence
+  - onboarding-emails
+  - win-back-sequence
+  - subject-line-copy
+  - sequence-timing
+  - email-program-audit
+
+triggers:
+  ru:
+    - сделай прогрев
+    - напиши онбординг-серию писем
+    - цепочка писем для рассылки
+    - реактивировать уснувших подписчиков
+    - дожать триал письмами
+    - серия писем перед продажей

@@ -1,0 +1,94 @@
+schema: comandos-skill-manifest/v1
+slug: pricing-strategy
+name: Стратегия ценообразования
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Собирает обоснованную схему цен и тарифов — от модели монетизации до психологии ценника
+  description: |
+    Навык-стратег по деньгам. Вместо того чтобы ставить цену «на глаз» или копировать
+    конкурента, агент проектирует ценообразование от ценности: подбирает модель монетизации
+    (подписка, разовая покупка, usage-based, revenue share), собирает тарифную сетку
+    Good-Better-Best, расставляет грейды и якоря, применяет психологию ценника и продумывает
+    апселлы.
+
+    Под капотом — методики ценовых исследований (Van Westendorp, MaxDiff, Gabor-Granger),
+    выбор value-метрики, упаковка под персоны, freemium vs free trial, стратегии повышения
+    цен и оформление прайс-страницы. Ты говоришь «как назначить цену» или «собери тарифы» —
+    получаешь схему с цифрами и обоснованием, а не догадку.
+
+    Подходит для SaaS, инфопродуктов, сервисов и любых проектов, где надо превратить
+    ценность в выручку без потери конверсии.
+  category: Маркетинг
+  icon: 💰
+  bullets:
+    - Подбирает модель монетизации под продукт — подписка, разовая, usage, revenue share
+    - Собирает тарифы Good-Better-Best с грейдами, лимитами и якорями
+    - Считает готовность платить через Van Westendorp, MaxDiff, Gabor-Granger
+    - Применяет психологию ценника — anchoring, decoy, charm-pricing, годовые скидки
+    - Продумывает апселлы, freemium vs trial и стратегию повышения цен
+  tags:
+    - Цены
+    - Тарифы
+    - Монетизация
+    - Подписка
+    - Прайсинг
+    - Юнит-экономика
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/pricing-strategy
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Интеграторы
+  - Маркетологи
+  - Indie-разработчики
+  - Основатели SaaS
+
+capabilities:
+  - monetization-model-design
+  - tier-packaging
+  - willingness-to-pay-research
+  - value-metric-selection
+  - pricing-psychology
+  - upsell-design
+  - freemium-vs-trial
+  - price-increase-strategy
+
+triggers:
+  ru:
+    - как назначить цену
+    - собери тарифы
+    - помоги с ценообразованием
+    - какую модель монетизации выбрать
+    - сколько брать за продукт
+    - собрать тарифную сетку

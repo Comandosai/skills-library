@@ -1,0 +1,96 @@
+schema: comandos-skill-manifest/v1
+slug: voice-agents
+name: Голосовые агенты
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: vibeship-spawner-skills
+  upstream: https://github.com/vibeship/spawner-skills
+  license: Apache 2.0
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Превращает «хочу голосового бота» в рабочую архитектуру — STT, TTS и диалог с задержкой до 800 мс
+  description: |
+    Навык-архитектор голосовых ассистентов. Скажи «сделай голосового бота» — и агент не
+    кидается лепить первый попавшийся пайплайн, а собирает рабочую систему: распознаёт речь
+    (STT), синтезирует ответ (TTS), ведёт диалог, ловит перебивания и держит задержку, при
+    которой разговор ощущается живым, а не как рация.
+
+    Под капотом — две архитектуры на выбор. Speech-to-speech (OpenAI Realtime API) для
+    минимальной задержки и сохранения эмоций. Или классический пайплайн STT→LLM→TTS, когда
+    нужен контроль на каждом шаге и простая отладка. Навык объясняет трейд-оффы, считает
+    бюджет задержки по компонентам и подсказывает, где обычно ломается.
+
+    Работает для телефонии и веба, помогает с детекцией голосовой активности, перехватом
+    реплики (barge-in) и обработкой шума. Подходит под любого агента — Claude Code, Codex,
+    Antigravity.
+  category: AI и нейросети
+  icon: 🎙️
+  bullets:
+    - Две архитектуры на выбор — speech-to-speech и пайплайн STT→LLM→TTS с честными трейд-оффами
+    - Держит задержку диалога до 800 мс, чтобы разговор ощущался живым
+    - Детекция голосовой активности, перехват реплики (barge-in) и обработка шума из коробки
+    - Считает бюджет задержки по каждому компоненту и показывает узкие места
+    - Готово под телефонию и веб — от прототипа до продакшена на миллионы звонков
+  tags:
+    - Голос
+    - STT
+    - TTS
+    - Ассистенты
+    - Телефония
+    - Realtime
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/voice-agents
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Интеграторы
+  - Маркетологи
+  - Indie-разработчики
+  - Стартапы
+
+capabilities:
+  - speech-to-speech
+  - speech-to-text
+  - text-to-speech
+  - conversational-ai
+  - voice-activity-detection
+  - turn-taking
+  - barge-in-detection
+  - latency-budgeting
+
+triggers:
+  ru:
+    - сделай голосового ассистента
+    - построй голосового бота
+    - распознавание и синтез речи
+    - голосовой бот для телефонии
+    - снизить задержку голосового диалога
+    - какую архитектуру выбрать для голоса

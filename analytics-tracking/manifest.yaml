@@ -1,0 +1,93 @@
+schema: comandos-skill-manifest/v1
+slug: analytics-tracking
+name: Аналитика и трекинг
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Скажи «настрой аналитику» — получи план трекинга и готовую разметку событий
+  description: |
+    Навык превращает агента в специалиста по аналитике. Вместо того чтобы наугад втыкать
+    счётчики, он сначала спрашивает, какие решения ты хочешь принимать на основе данных,
+    а потом строит план трекинга от обратного: какие события мерить, какие свойства к ним
+    цеплять, как их называть единообразно.
+
+    На выходе — готовый tracking plan (таблица событий, свойств и конверсий), настройка
+    GA4 / GTM / Plausible с кодом, который можно сразу вставить, стратегия UTM-меток и
+    чек-лист валидации. Навык знает про consent-режим и приватность — не тянет PII в
+    свойства и ждёт согласия там, где это требует закон.
+
+    Идеально, когда «надо настроить аналитику, но непонятно, что вообще мерить» — для
+    лендинга, продукта, бота или интернет-магазина.
+  category: Аналитика
+  icon: 📊
+  bullets:
+    - Считает события под решения, а не ради цифр — режет vanity-метрики
+    - Готовый tracking plan: таблица событий, свойств, конверсий
+    - Настройка GA4 / GTM / Plausible с кодом, который можно вставить сразу
+    - Единые правила нейминга событий и UTM-меток для всей команды
+    - Чек-лист валидации + забота о приватности (consent, без PII)
+  tags:
+    - Аналитика
+    - События
+    - Метрики
+    - Трекинг
+    - Конверсии
+    - GA4
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/analytics-tracking
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Маркетологи
+  - Интеграторы и автоматизаторы
+  - Indie-разработчики
+  - Продакт-менеджеры
+
+capabilities:
+  - tracking-plan-design
+  - event-taxonomy
+  - ga4-implementation
+  - gtm-setup
+  - utm-strategy
+  - conversion-tracking
+  - tracking-validation
+  - privacy-compliance
+
+triggers:
+  ru:
+    - настрой аналитику
+    - что мне мерить
+    - составь план трекинга
+    - настрой GA4
+    - какие события отслеживать
+    - настрой конверсии и UTM

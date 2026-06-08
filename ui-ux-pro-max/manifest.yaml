@@ -1,0 +1,96 @@
+schema: comandos-skill-manifest/v1
+slug: ui-ux-pro-max
+name: "UI/UX Pro Max"
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Сообщество Claude Code Skills
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Агент проектирует и ревьюит интерфейсы как UI/UX-профи — стиль, палитра, шрифты, отступы, доступность
+  description: |
+    База дизайн-интеллекта прямо в агенте: 50 стилей, 21 цветовая палитра, 50 шрифтовых
+    пар, 20 типов графиков и гайдлайны под 9 стеков (React, Next.js, Vue, Svelte, SwiftUI,
+    React Native, Flutter, Tailwind, shadcn/ui). Когда навык активен, агент не выдаёт
+    «дефолт от нейросети», а сначала подбирает целостную дизайн-систему под твой продукт
+    и индустрию — стиль, палитру, типографику, эффекты — и уже на ней строит интерфейс.
+
+    Работает в обе стороны: «сделай дашборд» — получаешь продуманный современный экран;
+    «почини и улучши UI» — получаешь ревью по чек-листу (контраст, фокус-стейты, тач-таргеты,
+    отступы, hover-состояния, светлая/тёмная тема, адаптив). Под капотом — поисковая база с
+    приоритетами и анти-паттернами: что делать и чего избегать, чтобы интерфейс выглядел
+    профессионально, а не «на коленке».
+
+    Идеально, когда нужно быстро поднять качество фронтенда: лендинг, SaaS-дашборд,
+    админка, e-commerce, портфолио или мобильное приложение — под нужный стек и без
+    типовых ошибок верстальщика-нейросети.
+  category: Дизайн
+  icon: 🖌️
+  bullets:
+    - Целая дизайн-система под продукт — стиль, палитра, шрифты, эффекты, а не случайный набор
+    - 50 стилей, 21 палитра, 50 шрифтовых пар, 20 графиков под 9 стеков
+    - Ревью UI по чек-листу — контраст, фокус, тач-таргеты, отступы, тёмная тема
+    - Анти-паттерны на борту — подсказывает, чего избегать, чтобы не было «дефолта от ИИ»
+    - Доступность и адаптив из коробки — 375/768/1024/1440, a11y, prefers-reduced-motion
+  tags:
+    - UI
+    - UX
+    - Дизайн-система
+    - Палитры
+    - Типографика
+    - Доступность
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/ui-ux-pro-max
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Интеграторы и фрилансеры
+  - Маркетологи
+  - Indie-разработчики
+  - Продакт-менеджеры
+
+capabilities:
+  - design-system-generation
+  - ui-implementation
+  - ui-code-review
+  - color-palette-selection
+  - font-pairing
+  - accessibility-audit
+  - responsive-layout
+  - stack-best-practices
+
+triggers:
+  ru:
+    - сделай дашборд
+    - почини и улучши UI
+    - подбери цветовую палитру
+    - собери лендинг
+    - сделай дизайн-систему
+    - проверь интерфейс на ошибки
