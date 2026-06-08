@@ -1,0 +1,91 @@
+schema: comandos-skill-manifest/v1
+slug: brainstorming
+name: Брейншторминг
+version: 0.1.0
+released_at: 2026-06-08
+
+# Происхождение (служебное поле, в MDX не идёт — для нашего учёта и атрибуции)
+source:
+  collection: Antigravity Awesome Skills
+  upstream: https://github.com/sickn33/antigravity-awesome-skills
+  license: MIT
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Превращает сырую идею в готовый план — через диалог, по одному вопросу
+  description: |
+    Навык-мышление перед любой стройкой. Вместо того чтобы агент сразу кидался писать код
+    или контент по размытому запросу, он сначала разбирает идею: задаёт вопросы по одному,
+    предлагает 2–3 подхода с плюсами и минусами, и собирает дизайн по кусочкам — проверяя
+    с тобой каждый шаг.
+
+    Результат — валидированный план/спека, записанная в файл, а не куча кода, который потом
+    жалко выбрасывать. Безжалостно режет лишнее по принципу YAGNI. Идеально, когда «хочу
+    сделать X, но не знаю с чего начать» — будь то фича, лендинг, бот или бизнес-процесс.
+  category: AI и нейросети
+  icon: 💡
+  bullets:
+    - Один вопрос за раз — не заваливает, ведёт за руку
+    - Всегда предлагает 2–3 подхода с трейд-оффами, а не первый попавшийся
+    - Дизайн по секциям 200–300 слов с проверкой на каждом шаге
+    - Режет лишнее по YAGNI и пишет финальный план в файл
+  tags:
+    - Мозговой штурм
+    - Планирование
+    - Идеи
+    - Требования
+    - Спецификация
+    - Дизайн
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+# Превью указывает на апстрим-источник (рабочая ссылка). После запуска конвейера
+# и создания репо Comandosai/skills-library переключим на:
+#   https://github.com/Comandosai/skills-library/tree/main/brainstorming
+links:
+  github: https://github.com/sickn33/antigravity-awesome-skills
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+target_audience:
+  - Предприниматели
+  - Продакт-менеджеры
+  - Indie-разработчики
+  - Стартапы
+  - Маркетологи
+
+capabilities:
+  - idea-validation
+  - requirements-gathering
+  - design-spec
+  - scope-control
+  - alternatives-exploration
+  - incremental-validation
+
+triggers:
+  ru:
+    - давай устроим мозговой штурм
+    - помоги придумать
+    - проработать идею
+    - с чего начать проект
+    - превратить идею в план
+    - какой подход выбрать
