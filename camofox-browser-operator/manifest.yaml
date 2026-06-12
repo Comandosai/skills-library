@@ -1,0 +1,97 @@
+schema: comandos-skill-manifest/v1
+slug: camofox-browser-operator
+name: Camofox Browser Operator
+version: 1.0.0
+released_at: 2026-06-12
+
+source:
+  collection: COMANDOS Hermes Skills
+  curated_by: COMANDOS
+  ru_localized: false
+
+card:
+  tagline: "Даёт Hermes полноценную работу в браузере: открыть сайт, кликать, заполнять формы, делать скриншоты и останавливаться на sensitive-шагах"
+  description: |
+    Навык для автономной работы Hermes Agent в реальном браузере через Camofox/Camoufox.
+    Агент получает устойчивый browser workflow: открывает сайты, кликает, заполняет формы,
+    проверяет страницы, делает скриншоты, смотрит console/network-симптомы и не бросает задачу
+    после первого сбоя.
+
+    Это не «обход антибота» и не обещание невидимости. Навык задаёт практичную границу:
+    агент сам делает легитимные действия в браузере, но CAPTCHA, SMS, 2FA, оплату,
+    юридические согласия и другие human-verification шаги передаёт человеку.
+  category: Автоматизация
+  icon: 🌐
+  bullets:
+    - Настраивает устойчивый workflow браузерного оператора для Hermes
+    - Работает с Camofox/Camoufox, headful/Xvfb, persistent sessions и длинными таймаутами
+    - Помогает открывать сайты, кликать, заполнять формы и тестировать web UI
+    - Даёт проверки fingerprint sanity: timezone, locale, geolocation, oscpu/platform
+    - Чётко останавливается на CAPTCHA/SMS/2FA/оплате и просит человека пройти sensitive-шаг
+  tags:
+    - Hermes
+    - Browser automation
+    - Camofox
+    - Camoufox
+    - Web automation
+    - QA
+    - Forms
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/camofox-browser-operator
+
+requirements:
+  - name: Hermes Agent
+    install_command: pipx install hermes-agent
+  - name: Node.js + npm
+    install_command: node --version && npm --version
+  - name: Camofox browser service
+    install_command: bash browser-operator-pack/scripts/install-camofox-browser.sh
+
+install:
+  - type: hermes-skill
+    command: hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity
+install_recommended: global
+
+platforms:
+  - id: hermes-agent
+    name: Hermes Agent
+
+target_audience:
+  - AI-интеграторы
+  - Технические основатели
+  - Разработчики AI-агентов
+  - Операторы browser automation
+  - Команды, которые хотят давать агенту реальные web-задачи
+
+capabilities:
+  - browser-operation
+  - form-filling
+  - web-ui-qa
+  - screenshot-analysis
+  - session-persistence
+  - human-in-the-loop
+  - camofox-setup
+  - browser-fingerprint-sanity-checks
+
+triggers:
+  ru:
+    - открой сайт и сделай
+    - заполни форму в браузере
+    - зарегистрируй аккаунт
+    - проверь страницу в браузере
+    - кликни по сайту
+    - настрой browser operator
+    - настрой Camofox для Hermes
+  en:
+    - open the website and do
+    - fill the form in browser
+    - test this page in browser
+    - set up browser operator
+    - configure Camofox for Hermes

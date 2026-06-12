@@ -1,0 +1,86 @@
+schema: comandos-skill-manifest/v1
+slug: browser-form-workflows
+name: Browser Form Workflows
+version: 1.0.0
+released_at: 2026-06-12
+
+source:
+  collection: COMANDOS Hermes Skills
+  curated_by: COMANDOS
+  ru_localized: false
+
+card:
+  tagline: "Помогает агенту проходить многошаговые формы: signup, onboarding, профили, checkout-like сценарии"
+  description: |
+    Поддерживающий навык для browser-задач, где агент работает с формами: регистрация,
+    онбординг, настройки профиля, анкеты, многошаговые заявки и checkout-like сценарии.
+    Навык учит агента не собирать лишние данные заранее, обновлять DOM-снимки после каждого
+    шага, не терять состояние при перерендере и честно останавливаться на sensitive-этапах.
+
+    Особенно полезен вместе с Camofox Browser Operator: один навык даёт браузерную среду,
+    второй — дисциплину прохождения форм без хаоса и выдуманных результатов.
+  category: Автоматизация
+  icon: 🧾
+  bullets:
+    - Ведёт агента по многошаговым формам без сбора лишних данных заранее
+    - Обновляет browser snapshot после каждого next/submit, чтобы не кликать stale refs
+    - Останавливается на паролях, SMS/email-кодах, CAPTCHA, оплате и юридических согласиях
+    - Обрабатывает provider anti-abuse и не зацикливается на повторных signup-попытках
+    - Даёт короткие, понятные статусы человеку во время формы
+  tags:
+    - Hermes
+    - Browser forms
+    - Signup
+    - Onboarding
+    - Web automation
+    - Human-in-the-loop
+  price: free
+
+author:
+  name: COMANDOS
+  github: Comandosai
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/browser-form-workflows
+
+requirements:
+  - name: Hermes Agent
+    install_command: pipx install hermes-agent
+
+install:
+  - type: hermes-skill
+    command: hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity
+install_recommended: global
+
+platforms:
+  - id: hermes-agent
+    name: Hermes Agent
+
+target_audience:
+  - AI-интеграторы
+  - Разработчики browser automation
+  - Команды поддержки и операций
+  - Люди, которые хотят поручать агенту web-формы
+
+capabilities:
+  - form-filling
+  - signup-workflows
+  - onboarding-workflows
+  - stale-dom-recovery
+  - sensitive-step-handoff
+  - anti-abuse-handling
+
+triggers:
+  ru:
+    - заполни форму
+    - зарегистрируй аккаунт
+    - пройди онбординг
+    - введи данные на сайте
+    - помоги пройти форму
+    - нужен код из SMS
+  en:
+    - fill this form
+    - sign up for account
+    - complete onboarding
+    - help with browser form

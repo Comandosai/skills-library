@@ -1,0 +1,12 @@
+# Example Hermes browser-related settings.
+# Merge manually into ~/.hermes/config.yaml if these keys exist in your Hermes version.
+# Exact config schema may differ by Hermes release; prefer `hermes setup tools` / `hermes config edit`.
+
+browser:
+  provider: camofox
+  camofox:
+    url: http://127.0.0.1:9377
+    managed_persistence: true
+    user_id: default-browser-user
+  inactivity_timeout: 900
+  command_timeout: 90
