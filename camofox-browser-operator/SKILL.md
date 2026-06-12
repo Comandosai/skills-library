@@ -90,10 +90,7 @@ pip install camoufox -q
 python3 -c "import camoufox; print(camoufox.__version__)"
 ~/.cache/camoufox/camoufox-bin --version
 deactivate
-python3 - <<'PY'
-import shutil
-shutil.rmtree("/tmp/cf-fix", ignore_errors=True)
-PY
+# Optional cleanup: delete the temporary /tmp/cf-fix virtualenv after verification.
 
 # 3. Start camofox-browser with same env vars
 cd ~/camofox-browser && \
