@@ -49,7 +49,7 @@ Verify:
 curl -fsS http://127.0.0.1:9377/health
 ```
 
-Connect Hermes browser tools on the next gateway/session restart by adding to `~/.hermes/.env`:
+Configure Hermes browser tools on the next gateway/session restart by adding this variable to the Hermes environment file:
 
 ```bash
 CAMOFOX_URL=http://127.0.0.1:9377

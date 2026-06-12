@@ -15,7 +15,7 @@
 3. На Linux запусти:
    - bash browser-operator-pack/scripts/install-camofox-browser.sh
    - bash browser-operator-pack/scripts/verify-camofox-browser.sh
-4. Добавь в конфиг/окружение Hermes переменную:
+4. Добавь в конфиг или файл окружения Hermes переменную:
    - CAMOFOX_URL=http://127.0.0.1:9377
 5. Если используется Hermes gateway — перезапусти gateway безопасным способом.
 6. Проверь реальным браузерным действием: открой https://example.com и верни title страницы.

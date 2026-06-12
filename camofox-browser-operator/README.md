@@ -18,7 +18,7 @@ bash browser-operator-pack/scripts/install-camofox-browser.sh
 bash browser-operator-pack/scripts/verify-camofox-browser.sh
 ```
 
-Добавь в `~/.hermes/.env`:
+Добавь в файл окружения Hermes:
 
 ```bash
 CAMOFOX_URL=http://127.0.0.1:9377

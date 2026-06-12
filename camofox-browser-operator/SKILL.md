@@ -89,7 +89,11 @@ python3 -m venv /tmp/cf-fix && source /tmp/cf-fix/bin/activate
 pip install camoufox -q
 python3 -c "import camoufox; print(camoufox.__version__)"
 ~/.cache/camoufox/camoufox-bin --version
-deactivate && rm -rf /tmp/cf-fix
+deactivate
+python3 - <<'PY'
+import shutil
+shutil.rmtree("/tmp/cf-fix", ignore_errors=True)
+PY
 
 # 3. Start camofox-browser with same env vars
 cd ~/camofox-browser && \
@@ -121,7 +125,7 @@ Validated with Camofox/Camoufox on 2026-06-11:
 - Pixelscan: `No automated behavior detected`, timezone/location Amsterdam, but still reports `Proxy detected`, `Masking detected`, and `Browser Fingerprint is inconsistent`.
 - CreepJS: not flagged as Chromium/headless; WebGL/timezone look coherent, but `Navigator` exposes a mixed platform detail: `Linux armv81` together with `Linux x86_64`. This likely contributes to fingerprint inconsistency.
 - `browser_console()` currently reports that console log capture is not available with the Camofox backend. JS expression evaluation (`browser_console(expression="...")`) still works. For console logs, rely on snapshots/vision and page text.
-- **`oscpu=Linux armv81` pitfall (resolved):** Old Camoufox binary v150 used by `@askjo/camofox-browser` leaks `navigator.oscpu=Linux armv81` while `navigator.platform=Linux x86_64`, creating a trivially detectable mismatch on Pixelscan/CreepJS/BrowserScan. **Fix:** replace the binary with Camoufox v135+ (e.g. via `pip install camoufox` which drops `camoufox-bin` at `~/.cache/camoufox/camoufox-bin`, then restart camofox-browser). Verified 2026-06-11: direct Python Camoufox v135.0.1-beta.24 reports `oscpu=Linux x86_64` coherently; BrowserForge fingerprint injection also applies correctly on v135 (oscpu/platform/UA all match requested values).
+- **`oscpu=Linux armv81` pitfall (resolved):** Old Camoufox binary v150 used by `@askjo/camofox-browser` leaks `navigator.oscpu=Linux armv81` while `navigator.platform=Linux x86_64`, creating a trivially detectable mismatch on Pixelscan/CreepJS/BrowserScan. **Fix:** replace the binary with Camoufox v135+ (e.g. via installing the `camoufox` Python package, which drops `camoufox-bin` at `~/.cache/camoufox/camoufox-bin`, then restart camofox-browser). Verified 2026-06-11: direct Python Camoufox v135.0.1-beta.24 reports `oscpu=Linux x86_64` coherently; BrowserForge fingerprint injection also applies correctly on v135 (oscpu/platform/UA all match requested values).
 - Some submit clicks may return a Camofox API timeout while the browser action still succeeds. After any timeout, immediately call `browser_snapshot()` before retrying; do not double-submit blindly.
 - Text masking like `+799****0000` can be normalized by browser typing into plain digits. Use clearly fake test values when testing forms, and avoid entering sensitive real data unless explicitly requested.
 
