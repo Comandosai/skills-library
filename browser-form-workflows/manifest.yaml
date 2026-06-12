@@ -50,7 +50,7 @@ requirements:
 
 install:
   - type: hermes-skill
-    command: hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity
+    command: hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity --yes
 install_recommended: global
 
 platforms:

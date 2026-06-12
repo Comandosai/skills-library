@@ -5,14 +5,14 @@
 ## Установка
 
 ```bash
-hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity
+hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity --yes
 ```
 
 Лучше ставить вместе с основным browser-operator навыком:
 
 ```bash
-hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity
-hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity
+hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity --yes
+hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity --yes
 ```
 
 ## Что делает

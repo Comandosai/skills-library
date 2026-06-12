@@ -56,7 +56,7 @@ requirements:
 
 install:
   - type: hermes-skill
-    command: hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity
+    command: hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity --yes
 install_recommended: global
 
 platforms:

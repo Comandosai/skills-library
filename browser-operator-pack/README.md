@@ -8,8 +8,8 @@
 ## Быстрая установка
 
 ```bash
-hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity
-hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity
+hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity --yes
+hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity --yes
 
 git clone https://github.com/Comandosai/skills-library.git /tmp/skills-library
 cd /tmp/skills-library

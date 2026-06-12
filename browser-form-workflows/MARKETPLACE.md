@@ -28,13 +28,13 @@
 ## ⚙️ Установка
 
 ```bash
-hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity
+hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity --yes
 ```
 
 Рекомендуется вместе с:
 
 ```bash
-hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity
+hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity --yes
 ```
 
 ## 🎴 КАРТОЧКА

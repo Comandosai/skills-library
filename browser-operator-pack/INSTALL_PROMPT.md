@@ -7,6 +7,8 @@
 
 Репозиторий: https://github.com/Comandosai/skills-library
 
+Если GitHub API упрётся в rate limit, используй уже настроенный `GITHUB_TOKEN`/`GITHUB_PAT` из окружения или попроси пользователя выполнить `gh auth login`.
+
 Что нужно сделать:
 1. Установи оба навыка Hermes из GitHub:
    - Comandosai/skills-library/camofox-browser-operator
@@ -23,8 +25,8 @@
 
 Команды, которые можно использовать:
 
-hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity
-hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity
+hermes skills install Comandosai/skills-library/camofox-browser-operator --category productivity --yes
+hermes skills install Comandosai/skills-library/browser-form-workflows --category productivity --yes
 
 git clone https://github.com/Comandosai/skills-library.git /tmp/skills-library
 cd /tmp/skills-library
