@@ -1,0 +1,93 @@
+schema: comandos-skill-manifest/v1
+slug: claude-video
+name: Claude смотрит видео (/watch)
+version: 0.1.0
+released_at: 2026-07-12
+
+# Происхождение (служебное поле, в MDX не идёт — атрибуция апстрима)
+source:
+  collection: Brad Automates (claude-video)
+  upstream: https://github.com/bradautomates/claude-video
+  license: MIT
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Claude смотрит видео, извлекает кадры и автоматически пишет конспект с тайм-кодами
+  description: |
+    Запусти `/watch <URL>` — и Claude посмотрит любое видео (YouTube, Vimeo, TikTok, X, Twitch, Loom, локальные файлы) напрямую через браузер, без скачивания. yt-dlp вытянет субтитры, ffmpeg нарезает ключевые кадры с автодетекцией сцен. Если субов нет — сам транскрибирует через Whisper (Groq или OpenAI, опционально).
+
+    На выходе: конспект видео с таймкодами, список ключевых кадров, цитаты героев. Видео размещаются на Claude, никуда не отправляются. Зависит только от ffmpeg и yt-dlp (ставятся через brew), Python 3 stdlib — без pip. Лучше всего работает с видео до 30 минут. 7500+ звёзд на GitHub.
+  category: Контент
+  icon: 🎬
+  bullets:
+    - Смотрит видео по ссылке (YouTube, Vimeo, TikTok, X, Twitch, Loom, локальные)
+    - Вытягивает субтитры без скачивания, при необходимости качает видео до 720p
+    - "Режимы: только транскрипт / до 50 / до 100 ключевых кадров (детекция сцен)"
+    - Если субов нет — транскрипция через Whisper API (Groq или OpenAI)
+    - Конспект с таймкодами и цитатами на выходе
+    - Видео остаются в Claude, не отправляются на сторонние API
+  tags:
+    - Видеоанализ
+    - Контент
+    - Конспект
+    - Транскрипция
+    - YouTube
+    - Исследование
+  price: free
+
+author:
+  name: Brad Bonanno (Brad Automates)
+  github: bradautomates
+  url: https://github.com/bradautomates/claude-video
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/claude-video
+
+requirements:
+  - name: ffmpeg
+    install_command: brew install ffmpeg
+  - name: yt-dlp
+    install_command: brew install yt-dlp
+  - name: Python 3
+    install_command: "Already included in macOS / Linux"
+  - name: "Claude Code CLI (опционально для установки как skill)"
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+# Топливо для будущего автоподборщика — заполняй осмысленно
+target_audience:
+  - Создатели контента
+  - Маркетологи
+  - Исследователи
+  - Аналитики конкурентов
+  - Менеджеры проектов
+  - Разработчики
+capabilities:
+  - video-analysis
+  - content-summarization
+  - transcription
+  - frame-extraction
+  - scene-detection
+  - research-automation
+triggers:
+  ru:
+    - посмотри это видео
+    - сделай конспект ролика
+    - разбери видео конкурента
+    - вытяни ключевые кадры из видео
+    - создай конспект с тайм-кодами
+    - помоги проанализировать вебинар
+    - выжми суть из видео
+    - смотри видео и делай выводы

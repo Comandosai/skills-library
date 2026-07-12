@@ -1,0 +1,96 @@
+schema: comandos-skill-manifest/v1
+slug: llm-cost-optimizer
+name: Оптимизатор расходов на LLM
+version: 0.1.0
+released_at: 2026-07-12
+
+# Происхождение (служебное поле, в MDX не идёт — атрибуция апстрима)
+source:
+  collection: alirezarezvani/claude-skills
+  upstream: https://github.com/alirezarezvani/claude-skills
+  license: MIT
+  curated_by: COMANDOS
+  ru_localized: true
+
+card:
+  tagline: Режет расходы на LLM-API в 5–10 раз — маршрутизация, кэширование, инструментация
+  description: |
+    Проактивный советник по оптимизации расходов на LLM API. Превращает расходы из чёрного ящика
+    в управляемый инженерный процесс: вводит логирование по фичам, проектирует маршрутизацию
+    запросов на дешёвые модели (80% запросов не нуждаются в топ-моделях), проводит промпт-аудит,
+    дизайнит кэширование. На выходе — cost audit по фичам, scorecard оптимизации 0–100, дизайн
+    архитектуры с прогнозом экономии. Для разработчиков LLM-приложений, продактов считающих TCO
+    и фаундеров с бюджетом на AI.
+  category: AI и нейросети
+  icon: 💸
+  bullets:
+    - 7 техник снижения расходов: маршрутизация, кэширование, логирование, сжатие промптов
+    - Классификация запросов по сложности — роутит на дешёвые модели, оставляет дорогие для reasoning
+    - Cost audit по фичам, scorecard 0–100 и список приоритетных фиксов с прогнозом экономии
+    - Проактивные флаги: моноулитура по модели, отсутствие max_tokens, неумолчание системного промпта
+    - Таблица 7 анти-паттернов и их recovery (нет логов → первый шаг: инструментация)
+  tags:
+    - LLM-оптимизация
+    - Расходы API
+    - Маршрутизация моделей
+    - Caching
+    - Cost Engineering
+    - Token Economy
+  price: free
+
+author:
+  name: Alireza Rezvani
+  github: alirezarezvani
+  original_url: https://github.com/alirezarezvani/claude-skills
+curated_by:
+  name: COMANDOS
+  url: https://comandos.ai
+
+links:
+  github: https://github.com/Comandosai/skills-library/tree/main/llm-cost-optimizer
+
+requirements:
+  - name: Claude Code CLI
+    install_command: npm install -g @anthropic-ai/claude-code
+
+install:
+  - type: claude-code-skill
+install_recommended: global
+
+platforms:
+  - id: claude-code
+    name: Claude Code
+  - id: openai-codex
+    name: OpenAI Codex
+  - id: google-antigravity
+    name: Google Antigravity
+
+# Топливо для будущего автоподборщика — заполняй осмысленно
+target_audience:
+  - Разработчики LLM-приложений
+  - Продакты с ограниченным бюджетом на AI
+  - Фаундеры стартапов на LLM
+  - ML инженеры
+  - Техлиды
+
+capabilities:
+  - cost-analysis
+  - cost-optimization
+  - model-routing
+  - caching-strategy
+  - prompt-optimization
+  - cost-monitoring
+  - token-economy
+
+triggers:
+  ru:
+    - мои расходы на API слишком большие
+    - какую модель выбрать для этой фичи
+    - оптимизируй расходы на LLM
+    - токены дорожают
+    - cost audit по фичам
+    - режем расходы на нейросети
+    - мы запускаем AI-фичу
+    - помоги спроектировать маршрутизацию моделей
+    - prompt caching strategy
+    - как снизить TCO на LLM
